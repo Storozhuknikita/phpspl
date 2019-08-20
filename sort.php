@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param $mas
+ * @return array
+ */
 function quickSort($mas)
 {
 	$count = count($mas);

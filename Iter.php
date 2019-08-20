@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class Chapter
+ */
 class Chapter {
 	protected $title;
 	protected $content;
@@ -31,6 +34,9 @@ class Chapter {
 }
 
 
+/**
+ * Class Book
+ */
 class Book implements IteratorAggregate {
 	protected $title;
 	protected $author;
@@ -82,8 +88,8 @@ $book->addChapter(new Chapter("Глава 1", "Что такое итерато�
 $book->addChapter(new Chapter("Глава 2", "Что такое сортировка"));
 $book->addChapter(new Chapter("Глава 3", "Что такое О большая"));
 
-echo "Все главы книги ".$book->getTitle().PHP_EOL;
+echo "Все главы книги ".$book->getTitle().PHP_EOL.'<br/>';
 
 foreach ($book as $chapter) {
-	echo $chapter->getTitle().PHP_EOL;
+	echo $chapter->getTitle().PHP_EOL.'<br/>'; echo $chapter->getContent().PHP_EOL.'<hr/>';
 }
